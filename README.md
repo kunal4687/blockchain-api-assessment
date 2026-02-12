@@ -32,15 +32,25 @@ Clone the repository and install dependencies:
 ```bash
 git clone <repo-url>
 cd <project-folder>
-npm install
+npm install express ethers 
 
 3. ConfigurationOpen index.js and update the ALCHEMY_URL with your personal key:JavaScriptconst ALCHEMY_URL = "[https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY](https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY)";
 4. Running the ProjectStart the local server:Bashnode index.js
-5. Testing the APIOnce the server is running, visit the following URL in your browser or Postman:http://localhost:3000/MyApiTest📊 Objective Checklist & ResultsTaskStatusDetailsNew API Endpoint✅ CompleteCreated MyApiTestSmart Contract Call✅ CompleteFetched USDT totalSupply from MainnetConsole Output✅ CompleteResults printed to terminal on requestCode Quality✅ CompleteClean, simple, and error-handledSample Terminal OutputPlaintext--- SUCCESS: DATA FETCHED VIA ALCHEMY ---
+5. Testing the APIOnce the server is running, visit the following URL in your browser or Postman:http://localhost:3000/MyApiTest📊 Objective Checklist & ResultsTaskStatusDetailsNew API Endpoint✅ Complete
+Created MyApiTest
+Smart Contract Call✅ Complete Fetched USDT totalSupply from Mainnet
+Console Output✅ Complete Results printed to terminal on request
+Code Quality✅ Complete Clean, simple, and error-handled
+Server started on http://localhost:3000
+Test endpoint: http://localhost:3000/MyApiTest
+--- New API Request Received ---
 {
-  token: 'Tether USD',
-  supply: '112456789012.345678 USDT',
-  provider: 'Alchemy RPC'
+  message: 'Blockchain data fetched successfully',
+  contractName: 'Tether USD',
+  totalTokenSupply: '96130880420.059503 USDT',
+  network: 'Ethereum Mainnet via Alchemy'
 }
-📝 NotesContract Used: 0xdAC17F958D2ee523a2206206994597C13D831ec7 (USDT)Decimals: Handled 6-decimal precision specifically for the USDT token using ethers.formatUnits.
+📝 NotesContract Used: 0xdAC17F958D2ee523a2206206994597C13D831ec7 (USDT)
+Decimals: Handled 6-decimal precision specifically for the USDT token using ethers.formatUnits.
+
 
