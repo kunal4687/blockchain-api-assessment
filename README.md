@@ -1,5 +1,5 @@
 ﻿# blockchain-api-assessment
-#install npm ethers
+#npm install express ethers
 
 #run project 
 node index.js
